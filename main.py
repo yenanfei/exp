@@ -6,7 +6,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 import cv2
 # mpl.use('TkAgg')
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset as BaseDataset
 
@@ -15,18 +15,18 @@ from torch.utils.data import Dataset as BaseDataset
 x_train_dir = '/data/testuser/nntest/data/out'
 
 
-# helper function for data visualization
-def visualize(**images):
-    """PLot images in one row."""
-    n = len(images)
-    plt.figure(figsize=(16, 5))
-    for i, (name, image) in enumerate(images.items()):
-        plt.subplot(1, n, i + 1)
-        plt.xticks([])
-        plt.yticks([])
-        plt.title(' '.join(name.split('_')).title())
-        plt.imshow(image)
-    plt.show()
+# # helper function for data visualization
+# def visualize(**images):
+#     """PLot images in one row."""
+#     n = len(images)
+#     plt.figure(figsize=(16, 5))
+#     for i, (name, image) in enumerate(images.items()):
+#         plt.subplot(1, n, i + 1)
+#         plt.xticks([])
+#         plt.yticks([])
+#         plt.title(' '.join(name.split('_')).title())
+#         plt.imshow(image)
+#     plt.show()
 
 
 class Dataset(BaseDataset):
